@@ -2,11 +2,11 @@
 BUILD OUTPUT DESCRIPTION
 ========================
 
-When you build an Java application project that has a main class, the IDE
+When you build a Java application project that has a main class, the IDE
 automatically copies all of the JAR
-files on the projects classpath to your projects dist/lib folder. The IDE
+files on the project's classpath to your project's dist/lib folder. The IDE
 also adds each of the JAR files to the Class-Path element in the application
-JAR files manifest file (MANIFEST.MF).
+JAR file's manifest file (MANIFEST.MF).
 
 To run the project from the command line, go to the dist folder and
 type the following:
@@ -23,10 +23,49 @@ JAR file is copied to the lib folder.
 * Only JAR files are copied to the lib folder.
 If the classpath contains other types of files or folders, these files (folders)
 are not copied.
-* If a library on the projects classpath also has a Class-Path element
-specified in the manifest,the content of the Class-Path element has to be on
-the projects runtime path.
+* If a library on the project's classpath also has a Class-Path element
+specified in the manifest, the content of the Class-Path element has to be on
+the project's runtime path.
 * To set a main class in a standard Java project, right-click the project node
 in the Projects window and choose Properties. Then click Run and enter the
 class name in the Main Class field. Alternatively, you can manually type the
 class name in the manifest Main-Class element.
+
+========================
+PROJECT DIRECTORY
+========================
+
+build/
+    built-jar.properties
+    classes/
+        .netbeans_automatic_build
+        .netbeans_update_resources
+        AdminLogin.class
+        AdminLogin.form
+        AdminLogin$1.class
+        ...
+    empty/
+    generated-sources/
+build.xml
+manifest.mf
+nbproject/
+    build-impl.xml
+    genfiles.properties
+    private/
+        private.properties
+        private.xml
+    project.properties
+    project.xml
+src/
+    AdminLogin.form
+    AdminLogin.java
+    CashLogin.form
+    CashLogin.java
+    CashMain.form
+    CashMain.java
+    MainFrame.form
+    MainFrame.java
+    MyFrames/
+        Quickbill.form
+        Quickbill.java
+    swingx-all-1.6.4.jar
